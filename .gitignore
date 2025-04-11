@@ -1,0 +1,17 @@
+.ipynb_checkpoints
+__pycache__/
+*.pyc
+AllOracleRuns/
+*.out
+manufa_model/
+Untitled.ipynb
+nnunet_integration.ipynb
+slurm_out/
+to delete/
+venv/
+path/
+notes_to_self.md
+nnUNet/
+uuUNet_ignore/
+run.sh
+experiment.sh
