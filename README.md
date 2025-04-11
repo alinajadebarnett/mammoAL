@@ -1,4 +1,4 @@
-# Codebase for Active Learning Mammo Project - TODO
+# Codebase for Active Learning Mammo Project
 
 
 ## Running an experiment
