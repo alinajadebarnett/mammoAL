@@ -21,13 +21,20 @@ random_seed: Sets the random seed behind the active learning experiment
 A few parameters are adjustable from inside the experiment_v4.py file, described below:
 
 cbis_ddsm_dir: Located on line 48, this directory points to the CBIS-DDSM dataset, which is used to initially train the discriminator.
+
 in_house_dir: Located on line 50, this directory points to your in-house dataset that your are labelling with this active learning process.
+
 ground_truth_dir: Located on line 52, this directory points to the ground truth directory for the automatic oracle to reference.
+
+## Initial Segmenter Model
+The initial segmenter model was trained on CBIS-DDSM data, using the nnUNET framework. Documentation for how to initialize and train a nnUNet model can be found at their repo: https://github.com/MIC-DKFZ/nnUNet?tab=readme-ov-file. Relevant links are under the "How to Get Started" section. 
+
+To load in a model, refer to line 66 of experiment_v4.py, also shown below:
+
+segmenter = nnunet_model.nnunet_model(base_model_task_id = "Task701_cbis-ddsm")
+
+The task_id follows the nnUNet format.
 
  ## Packages and Dependencies
 All required packages and their versions can be found in the requirements.txt file. We recommend creating a separate environment
 (via Python or Conda), or using a dependency manager like Poetry.
-
-Additionally, documentation for the nnUNet setup can be found at their repo: https://github.com/MIC-DKFZ/nnUNet?tab=readme-ov-file. 
-Relevant links are under the "How to Get Started" section.
-
